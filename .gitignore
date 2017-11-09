@@ -9,5 +9,5 @@ www/public/core
 www/vendor
 mysqldb
 style.css
-public/content/plugins/*
+www/public/content/plugins/*
 # If you manually create a plugin, add !/public/content/plugins/your-plugin so it is not ignored
