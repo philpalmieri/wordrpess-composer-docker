@@ -1,0 +1,2 @@
+This folder will be mounted in your mysql container and available for
+mysqldump and restore
