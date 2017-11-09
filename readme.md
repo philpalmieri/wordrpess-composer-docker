@@ -4,11 +4,10 @@
 ### In www folder:
 * `composer install`
 ### In root directory
-* `docker-compose up -d`
-* Database Setup
-** Connect to Database:
-*** `docker exect -it {hash} bash`
-*** `mysql -u root -p`
-*** Password is root
-** `use wp;`
-** `source /var/support/yourbackedup.sql`
+`docker-compose up -d`
+## Database Setup
+* Connect to Database:
+* `docker exect -it {hash} bash`
+* `mysql -u root -p` //Password is root
+* `use wp;`
+* `source /var/support/yourbackedup.sql`
