@@ -1,0 +1,19 @@
+version: '2'
+services:
+    wpdb:
+      image: mysql:5.6.33
+      container_name: wpdb
+      environment:
+         - MYSQL_ROOT_PASSWORD=root
+         - MYSQL_DATABASE=wp
+      volumes:
+        - ./mysqldb:/var/lib/mysql
+        - ./support:/var/support
+      ports:
+        - "3336:3306"
+    wpweb:
+      build: www/
+      ports:
+        - "8080:80"
+      volumes:
+        - ./www:/var/www/sites

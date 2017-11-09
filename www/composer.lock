@@ -1,0 +1,457 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "42583c8ed1392ffd88e4eea5e2338eae",
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "osclass",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "time": "2017-08-09T07:53:48+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress",
+            "version": "4.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress.git",
+                "reference": "d5bc0df53dd6e6e43082f47ccee89aab2049bc23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/d5bc0df53dd6e6e43082f47ccee89aab2049bc23",
+                "reference": "d5bc0df53dd6e6e43082f47ccee89aab2049bc23",
+                "shasum": ""
+            },
+            "require": {
+                "johnpbloch/wordpress-core": "4.8.3",
+                "johnpbloch/wordpress-core-installer": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-10-31T16:40:07+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core",
+            "version": "4.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core.git",
+                "reference": "949e279f9752b458d70288636a77d2b8f66801f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/949e279f9752b458d70288636a77d2b8f66801f6",
+                "reference": "949e279f9752b458d70288636a77d2b8f66801f6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "provide": {
+                "wordpress/core-implementation": "4.8.3"
+            },
+            "type": "wordpress-core",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-10-31T16:39:59+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core-installer",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "conflict": {
+                "composer/installers": "<1.0.6"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": ">=4.8.35"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "johnpbloch\\Composer\\WordPressCorePlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "johnpbloch\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John P. Bloch",
+                    "email": "me@johnpbloch.com"
+                }
+            ],
+            "description": "A custom installer to handle deploying WordPress with composer",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-05-31T18:42:33+00:00"
+        },
+        {
+            "name": "phpseclib/phpseclib",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpseclib/phpseclib.git",
+                "reference": "f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b",
+                "reference": "f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phing/phing": "~2.7",
+                "phpunit/phpunit": "~4.0",
+                "sami/sami": "~2.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "suggest": {
+                "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
+                "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
+                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "phpseclib/bootstrap.php"
+                ],
+                "psr-4": {
+                    "phpseclib\\": "phpseclib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Wigginton",
+                    "email": "terrafrost@php.net",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Patrick Monnerat",
+                    "email": "pm@datasphere.ch",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andreas Fischer",
+                    "email": "bantu@phpbb.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Hans-Jürgen Petrich",
+                    "email": "petrich@tronic-media.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
+            "homepage": "http://phpseclib.sourceforge.net",
+            "keywords": [
+                "BigInteger",
+                "aes",
+                "asn.1",
+                "asn1",
+                "blowfish",
+                "crypto",
+                "cryptography",
+                "encryption",
+                "rsa",
+                "security",
+                "sftp",
+                "signature",
+                "signing",
+                "ssh",
+                "twofish",
+                "x.509",
+                "x509"
+            ],
+            "time": "2017-10-23T05:04:54+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
+            "version": "1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
+                "reference": "tags/1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amazon-s3-and-cloudfront/"
+        },
+        {
+            "name": "wpackagist-plugin/amazon-web-services",
+            "version": "1.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amazon-web-services/",
+                "reference": "tags/1.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.1.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amazon-web-services/"
+        },
+        {
+            "name": "wpackagist-plugin/disable-xml-rpc-pingback",
+            "version": "1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-xml-rpc-pingback/",
+                "reference": "tags/1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-xml-rpc-pingback.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-xml-rpc-pingback/"
+        },
+        {
+            "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
+            "version": "1.10.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/sendgrid-email-delivery-simplified/",
+                "reference": "tags/1.10.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/sendgrid-email-delivery-simplified.1.10.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
+        },
+        {
+            "name": "wpackagist-plugin/wordfence",
+            "version": "6.3.21",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordfence/",
+                "reference": "tags/6.3.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.21.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordfence/"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6"
+    },
+    "platform-dev": []
+}

@@ -1,0 +1,79 @@
+# Deny access to all .htaccess files
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+# Deny access to wp-config
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
+# Deny access to xmlrpc
+<Files xmlrpc.php>
+Order Deny,Allow
+Deny from all
+</Files>
+
+# Deny ability to browse directories
+Options All -Indexes
+
+# Deny access to wp-include files
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+# Rewrite requests for author pages so usernames can't be found
+# http://wordpress.stackexchange.com/questions/46469/can-i-prevent-enumeration-of-usernames
+# RewriteCond %{QUERY_STRING} author=\d
+# RewriteRule ^ /? [L,R=301]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+AddType video/mp4 .mp4
+AddType image/svg+xml svg
+AddType image/svg+xml svgz
+AddEncoding x-gzip .svgz
+
+# UNCOMMENT THESE LINES IF YOU NEED A BIGGER UPLOAD LIMIT
+# php_value upload_max_filesize 64M
+# php_value post_max_size 64M
+
+# ##############################################################################
+# # INTERNET EXPLORER                                                          #
+# ##############################################################################
+
+# ------------------------------------------------------------------------------
+# | Better website experience                                                  |
+# ------------------------------------------------------------------------------
+
+# Force IE to render pages in the highest available mode in the various
+# cases when it may not: http://hsivonen.iki.fi/doctype/ie-mode.pdf.
+# Use, if installed, Google Chrome Frame.
+
+<IfModule mod_headers.c>
+    Header set X-UA-Compatible "IE=edge,chrome=1"
+    # `mod_headers` can't match based on the content-type, however, we only
+    # want to send this header for HTML pages and not for the other resources
+    <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svg|svgz|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+</IfModule>
