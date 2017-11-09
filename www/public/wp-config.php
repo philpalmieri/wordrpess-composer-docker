@@ -17,6 +17,9 @@
  *
  * @package WordPress
  */
+// redefine plugin directory
+define('WP_PLUGIN_DIR', dirname(__FILE__) . '/wp-content/plugins');
+define('WP_PLUGIN_URL', WP_HOME . '/wp-content/plugins');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -77,7 +80,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
@@ -87,3 +90,8 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/** REQUIRE Composer autoload file */
+require __DIR__ . '/../vendor/autoload.php';
+
+register_theme_directory(  '/wp-content/themes' );
